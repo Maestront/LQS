@@ -1,0 +1,55 @@
+@startuml TRON
+class Jugador
+class Enemigo
+class Limite
+class BordeInterior
+class Interfaz
+class Escenario
+class Personaje
+class Puntaje
+class Vida
+class BordeExterior
+class Control
+class Posicion
+class Imagen
+class Velocidad
+class IA
+class Nivel
+class Coordenada
+class Teclado
+class Sonido
+
+Personaje *-- Sonido
+Interfaz *-- Sonido
+Teclado -|> Control
+Posicion *-- Coordenada
+Jugador o-- Nivel
+IA o-- Control
+Jugador *-- Velocidad
+Enemigo *-- Velocidad
+Jugador *-- Imagen
+Enemigo *-- Imagen
+Escenario -|> Imagen
+Jugador *-- Posicion
+Enemigo *-- Posicion
+Jugador o-- Control
+Jugador -|> Personaje
+Jugador *-- Vida
+Jugador o-- Puntaje
+Enemigo -|> Personaje
+Enemigo o-- BordeInterior
+BordeExterior o-- Vida
+BordeInterior o-- Vida
+Interfaz *-- Puntaje
+Limite -|> BordeExterior
+Limite -|> BordeInterior
+Limite o-- Vida
+Interfaz *-- Fondo
+Fondo -|> Escenario
+Control o-- Personaje
+Interfaz *-- Vida
+Vida *-- Imagen
+BordeInterior *-- Imagen
+BordeExterior *-- Imagen
+Interfaz -|> Imagen
+@enduml
