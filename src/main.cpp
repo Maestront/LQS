@@ -14,6 +14,6 @@ int main()
     m1.Dnom();
     m2.Dnom();
     m3.Dnom();
-
+ //si
     return 0;
 }
